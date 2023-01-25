@@ -1,0 +1,229 @@
+#fileOpen {
+  background: radial-gradient(rgba(255, 255, 255, 0.493) 0%, rgba(53, 173, 243, 0.493) 200%);
+  padding: 50px;
+  min-width: 400px;
+  border-radius: 20px;
+  margin: 50px;
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.tdl {
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.input {
+  min-width: 400px;
+}
+
+#chatwindow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin-bottom: 2em;
+  padding: 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 1px rgba(158, 158, 158, 0.5);
+          box-shadow: 1px 1px 1px rgba(158, 158, 158, 0.5);
+  max-width: 800px;
+  max-height: 85vh;
+}
+
+#chatwindow #chatheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 2px;
+  background-color: rgba(8, 10, 63, 0.99);
+  z-index: 2;
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+  -webkit-box-shadow: 0px 1px 1px rgba(144, 144, 162, 0.5);
+          box-shadow: 0px 1px 1px rgba(144, 144, 162, 0.5);
+}
+
+#chatwindow #chatheader:after {
+  padding: 0px 4px;
+  margin: auto 0;
+  content: 'Dr. Prateek Raj Gautam';
+  color: white;
+}
+
+#chatwindow #chatheader:hover {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+#chatwindow #chatheader:hover #dp {
+  width: 150px;
+  border-radius: 5px;
+}
+
+#chatwindow #chatheader #dp {
+  position: relative;
+  width: 40px;
+  border-radius: 50%;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  padding: 1px;
+}
+
+#chatwindow #chat {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(102, 255, 115, 0);
+  padding: 2em;
+  padding-bottom: 4em;
+  max-width: 750px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 60vh;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}
+
+#chatwindow #chat .chatbubble {
+  font-size: clamp(1em, 2vw, 1.5em);
+  margin-bottom: 2em;
+  background-color: rgba(128, 128, 128, 0.1);
+  padding: .5em 1em;
+  -webkit-box-shadow: 1px 1px 1px rgba(212, 212, 238, 0.5);
+          box-shadow: 1px 1px 1px rgba(212, 212, 238, 0.5);
+  border-radius: .5em;
+  margin-bottom: 1em;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+}
+
+#chatwindow #chat .chatbubble:nth-child(1) {
+  margin-top: 5em;
+}
+
+#chatwindow #chat .chatbubble:nth-last-child(1) {
+  margin-top: -1em;
+  -webkit-transition: margin-top .5s ease 2s;
+  transition: margin-top .5s ease 2s;
+}
+
+#chatwindow #chat .chatbubble:nth-last-child(2) {
+  margin-bottom: 4em;
+}
+
+#chatwindow #mailform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  -ms-flex-item-align: center;
+      align-self: center;
+  bottom: 0px;
+  background: rgba(102, 255, 115, 0);
+  padding: 2em;
+  margin-right: auto;
+  max-width: 750px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+#chatwindow #mailform #chatinput {
+  width: 100%;
+  height: 4em;
+  scroll-behavior: auto;
+  border-radius: .5em;
+  color: black;
+  font-size: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: .5em;
+  margin-bottom: .5em;
+}
+
+#chatwindow #mailform #sendbutton {
+  padding: .5em;
+  background: #0c99b367;
+  color: white;
+  border-radius: .5em;
+  height: 3em;
+  min-width: 6em;
+  margin: 0;
+}
+
+#contact {
+  color: white;
+}
+
+#contact ul {
+  display: block;
+}
+
+#contact ul li {
+  display: inline-block;
+  font-size: small;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: aqua;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#contact ul li a:hover {
+  text-shadow: 2px 2px 3px #fff;
+}
+
+#contact ul li::after {
+  content: '|';
+}
+
+#contact ul li:first-child:before {
+  content: '|';
+}
+
+.section:nth-child(odd) {
+  margin-top: 2em;
+  padding-top: 2em;
+}
+/*# sourceMappingURL=pagestyle.css.map */

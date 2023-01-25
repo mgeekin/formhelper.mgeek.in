@@ -1,0 +1,18 @@
+/* Fonts and Variables */
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
+$colorBG:linear-gradient(-30deg, hsl(300, 78%, 9%) 70%, hsl(207, 76%, 40%) 200%) no-repeat scroll 0 !default;
+$color:#EEF !default;
+$fontFamily: "Poppins","Exo",
+'Verdana' !default;
+$fontHeading:'Poppins','Inter',
+"Play",
+'Verdana';
+$accentColor:hsla(180, 100%, 50%,.8);
+$colorButton:linear-gradient(0deg, hsla(182, 100%, 52%,.8) 10%, hsl(182, 100%, 73%) 80%, hsl(182, 100%, 52%) 100%) no-repeat scroll 0 !default;
+$colorButtonText:hsl(197, 80%, 22%);
+$linkcolor:#ddd;
+$colorBody:$colorBG;
+$footcolor:hsl(197, 61%, 63%);
+$siteTitleValue:'FormHelper';
+
+

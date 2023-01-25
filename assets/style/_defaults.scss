@@ -1,0 +1,313 @@
+:root {
+
+    --fontScale: 1;
+    --fontSize: calc(var(--fontScale, 1) * 1rem);
+    --textColor: white;
+    --colorScheme: normal;
+    --fontFamily: "open sans";
+    --lightFactor: 1;
+    --hue: 240;
+    --sat: 45%;
+    --light: 15%;
+    --hueAscent: 180;
+    --satAscent: 80%;
+    --lightAscent: 50%;
+    --textColor: white;
+
+
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
+
+
+
+
+/* Reset style */
+* {
+
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    transition: all 250ms ease-in-out;
+    scroll-behavior: smooth;
+    color-scheme: var(--colorScheme, normal);
+}
+
+
+body {
+    --h: var(--hue, 300);
+    --s: var(--sat, 78%);
+    --l: calc(var(--light, 9%) * var(--lightFactor, 1));
+    width: 100%;
+    background: linear-gradient(-30deg, hsl(var(--h), var(--s), var(--l)) 70%, hsl(207, 76%, 40%) 200%) no-repeat scroll;
+    color: var(--textColor, white);
+    font-family: var(--fontFamily);
+}
+
+
+a {
+    // padding-inline: 5px;
+    --ha: var(--hueAscent, 200);
+    --sa: var(--satAscent, 100%);
+    --la: var(--lightAscent, 50%);
+    color: hsl(var(--ha), var(--sa), var(--la));
+
+    &:hover {
+        color: white;
+        // background: hsl(var(--ha), var(--sa), var(--la));
+        // padding: 5px;
+    }
+}
+
+button,
+.button {
+
+    --ha: var(--hueAscent, 200);
+    --sa: var(--satAscent, 100%);
+    --la: var(--lightAscent, 50%);
+    // color: hsl(var(--ha), var(--sa), var(--la));
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    outline: .2em solid hsl(var(--ha), var(--sa), var(--la));
+    ;
+    padding: .5em;
+    background: hsl(var(--ha), var(--sa), var(--la));
+    color: $colorButtonText;
+    text-align: center;
+    text-shadow: none;
+    margin: 2em;
+    margin-left: 0;
+    text-transform: capitalize;
+    border-radius: .01em;
+
+
+    &:hover {
+        --la: calc(var(--lightAscent, 50%) * .8);
+        --ha: calc(var(--hueAscent, ) + 20);
+        outline: 0.1em solid hsl(var(--ha), var(--sa), calc(var(--la) * .5));
+
+        box-shadow: 0px 0px .5em hsl(var(--ha), var(--sa), var(--la));
+
+    }
+
+
+
+}
+
+.button-blank {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    outline: .2em solid hsl(var(--ha), var(--sa), var(--la));
+    ;
+    padding: .5em;
+    background: rgba(1, 1, 1, 0.1);
+    color: hsl(var(--ha), var(--sa), var(--la));
+    text-align: center;
+    text-shadow: none;
+    margin: 2em;
+    margin-left: 0;
+    text-transform: capitalize;
+    border-radius: .01em;
+
+    &:hover {
+        --la: calc(var(--lightAscent, 50%) * .8);
+        --ha: calc(var(--hueAscent, ) + 20);
+        outline: 0.1em solid hsl(184, 100%, 51%);
+        box-shadow: 0px 0px .5em hsl(184, 100%, 51%);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-block: 1em;
+}
+
+h1 {
+    font-size: clamp(1.5em, 7vw, 2.5em);
+}
+
+h2 {
+    font-size: clamp(1.3em, 5vw, 1.8em);
+}
+
+h3 {
+    font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
+p {
+
+    // @extend .gold;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+table {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999;
+    padding: 20px;
+    width: 100%;
+
+    thead {
+        // background: rgba(1, 1, 1, 0.3);
+        padding: 2px;
+
+    }
+
+    tbody {
+
+
+        tr {
+            padding: 2px;
+
+            &:nth-child(odd) {
+                background: rgba(1, 1, 1, 0.5);
+            }
+
+            &:nth-child(even) {
+                background: rgba(236, 236, 236, 0.2);
+
+            }
+
+            td {
+                width: 70%;
+
+                &:nth-child(1) {
+                    width: 150px;
+                }
+            }
+
+        }
+    }
+}
+
+.input {
+    margin: 2px;
+    width: 100%;
+    background: #BBC;
+}
+
+video {
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px white;
+    margin-bottom: 10%;
+
+}
+
+
+
+#app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // color: $color;
+    // max-width: 100%;
+    // padding-left: 00%;
+    // padding-right: 00%;
+
+    #main {
+
+        position: relative;
+        // background: $colorBG;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+
+    }
+
+}
+
+.maincontainer,
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0;
+}
+
+section,
+.section {
+    padding-block: 10em;
+}
+
+.section {
+
+    background-color: hsla(var(--h), var(--secs), var(--secl), var(--a, .9));
+
+    &:nth-child(even) {
+        --a: .9;
+        --secs: calc(var(--s) * 1.1);
+        --secl: calc(var(--l) * 1.2);
+    }
+
+    &:nth-child(odd) {
+
+        --a: .9;
+        --secs: calc(var(--s) * .9);
+        --secl: calc(var(--l) * 1.1);
+    }
+}
+
+
+ol {
+    list-style: none;
+    counter-reset: item;
+
+    li {
+        counter-increment: item;
+        margin-bottom: 5px;
+
+        &:before {
+            font-size: small;
+            margin-right: 10px;
+            content: counter(item);
+            background: $accentColor;
+            border-radius: 100%;
+            color: #222222;
+            padding: .1em;
+            margin: .5wdem;
+
+            width: 1.2em;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}
+
+.m {
+    &1 {
+        margin: 1em;
+        margin-left: 2em;
+    }
+}
+
+.p {
+    &1 {
+        padding-bottom: .5em;
+    }
+
+    &t {}
+
+    &b {}
+
+    &l {}
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+}

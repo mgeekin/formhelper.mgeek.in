@@ -1,0 +1,439 @@
+/* Fonts and Variables */
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Exo|Play|Roboto+Mono|Unica+One");
+:root {
+  --fontScale: 1;
+  --fontSize: calc(var(--fontScale, 1) * 1rem);
+  --textColor: white;
+  --colorScheme: normal;
+  --fontFamily: "open sans";
+  --lightFactor: 1;
+  --hue: 240;
+  --sat: 45%;
+  --light: 15%;
+  --hueAscent: 180;
+  --satAscent: 80%;
+  --lightAscent: 50%;
+  --textColor: white;
+}
+
+/* Reset style */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  scroll-behavior: smooth;
+  color-scheme: var(--colorScheme, normal);
+}
+
+body {
+  --h: var(--hue, 300);
+  --s: var(--sat, 78%);
+  --l: calc(var(--light, 9%) * var(--lightFactor, 1));
+  width: 100%;
+  background: linear-gradient(-30deg, hsl(var(--h), var(--s), var(--l)) 70%, #186eb4 200%) no-repeat scroll;
+  color: var(--textColor, white);
+  font-family: var(--fontFamily);
+}
+
+a {
+  --ha: var(--hueAscent, 200);
+  --sa: var(--satAscent, 100%);
+  --la: var(--lightAscent, 50%);
+  color: hsl(var(--ha), var(--sa), var(--la));
+}
+
+a:hover {
+  color: white;
+}
+
+button,
+.button {
+  --ha: var(--hueAscent, 200);
+  --sa: var(--satAscent, 100%);
+  --la: var(--lightAscent, 50%);
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  outline: 0.2em solid hsl(var(--ha), var(--sa), var(--la));
+  padding: .5em;
+  background: hsl(var(--ha), var(--sa), var(--la));
+  color: #0b4c65;
+  text-align: center;
+  text-shadow: none;
+  margin: 2em;
+  margin-left: 0;
+  text-transform: capitalize;
+  border-radius: .01em;
+}
+
+button:hover,
+.button:hover {
+  --la: calc(var(--lightAscent, 50%) * .8);
+  --ha: calc(var(--hueAscent, ) + 20);
+  outline: 0.1em solid hsl(var(--ha), var(--sa), calc(var(--la) * .5));
+  -webkit-box-shadow: 0px 0px 0.5em hsl(var(--ha), var(--sa), var(--la));
+          box-shadow: 0px 0px 0.5em hsl(var(--ha), var(--sa), var(--la));
+}
+
+.button-blank {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  outline: 0.2em solid hsl(var(--ha), var(--sa), var(--la));
+  padding: .5em;
+  background: rgba(1, 1, 1, 0.1);
+  color: hsl(var(--ha), var(--sa), var(--la));
+  text-align: center;
+  text-shadow: none;
+  margin: 2em;
+  margin-left: 0;
+  text-transform: capitalize;
+  border-radius: .01em;
+}
+
+.button-blank:hover {
+  --la: calc(var(--lightAscent, 50%) * .8);
+  --ha: calc(var(--hueAscent, ) + 20);
+  outline: 0.1em solid #05eeff;
+  -webkit-box-shadow: 0px 0px 0.5em #05eeff;
+          box-shadow: 0px 0px 0.5em #05eeff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding-block: 1em;
+}
+
+h1 {
+  font-size: clamp(1.5em, 7vw, 2.5em);
+}
+
+h2 {
+  font-size: clamp(1.3em, 5vw, 1.8em);
+}
+
+h3 {
+  font-size: clamp(1.2em, 4vw, 1.5em);
+}
+
+p {
+  padding-top: 20px;
+}
+
+table {
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px #999;
+          box-shadow: 1px 1px 3px #999;
+  padding: 20px;
+  width: 100%;
+}
+
+table thead {
+  padding: 2px;
+}
+
+table tbody tr {
+  padding: 2px;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgba(1, 1, 1, 0.5);
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(236, 236, 236, 0.2);
+}
+
+table tbody tr td {
+  width: 70%;
+}
+
+table tbody tr td:nth-child(1) {
+  width: 150px;
+}
+
+.input {
+  margin: 2px;
+  width: 100%;
+  background: #BBC;
+}
+
+video {
+  width: 100%;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px white;
+          box-shadow: 2px 2px 2px white;
+  margin-bottom: 10%;
+}
+
+#app {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#app #main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.maincontainer,
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0;
+}
+
+section,
+.section {
+  padding-block: 10em;
+}
+
+.section {
+  background-color: hsla(var(--h), var(--secs), var(--secl), var(--a, 0.9));
+}
+
+.section:nth-child(even) {
+  --a: .9;
+  --secs: calc(var(--s) * 1.1);
+  --secl: calc(var(--l) * 1.2);
+}
+
+.section:nth-child(odd) {
+  --a: .9;
+  --secs: calc(var(--s) * .9);
+  --secl: calc(var(--l) * 1.1);
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+
+ol li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+ol li:before {
+  font-size: small;
+  margin-right: 10px;
+  content: counter(item);
+  background: rgba(0, 255, 255, 0.8);
+  border-radius: 100%;
+  color: #222222;
+  padding: .1em;
+  margin: .5wdem;
+  width: 1.2em;
+  text-align: center;
+  display: inline-block;
+}
+
+.m1 {
+  margin: 1em;
+  margin-left: 2em;
+}
+
+.p1 {
+  padding-bottom: .5em;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+/* template */
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#fileOpen {
+  background: radial-gradient(rgba(255, 255, 255, 0.493) 0%, rgba(53, 173, 243, 0.493) 200%);
+  padding: 50px;
+  min-width: 400px;
+  border-radius: 20px;
+  margin: 50px;
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.ytContainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.ytVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+}
+
+.cursor {
+  margin-left: .1em;
+}
+
+.cursor:after {
+  width: .1em;
+  height: 1.6em;
+  display: inline;
+  background-color: #fff;
+  padding: .08em;
+  text-shadow: none;
+  font-weight: 100;
+  content: '';
+  -webkit-transform: translateY(-0.3em);
+          transform: translateY(-0.3em);
+  -webkit-animation: cusrorblink 500ms infinite;
+          animation: cusrorblink 500ms infinite;
+}
+
+@-webkit-keyframes cusrorblink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes cusrorblink {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+}
+
+#logBlock {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  top: 50px;
+  right: 50px;
+  padding: 5px;
+  padding-right: 15px;
+  border-radius: 2px;
+  min-width: 30%;
+  min-height: 20%;
+  max-height: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  overflow: scroll;
+  resize: both;
+}
+
+#logBlock p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#logBlock p span {
+  padding-left: 5px;
+  color: black;
+  font-weight: 100;
+  font-size: smaller;
+}
+
+#gameInst {
+  opacity: .05;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -webkit-animation: gameblink 2s 5;
+          animation: gameblink 2s 5;
+  padding: 50px;
+}
+
+#gameInst:hover {
+  opacity: .5;
+}
+
+#gameInst #keylist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#gameInst #keylist .gamekey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 4wpx;
+  min-height: 40px;
+  min-width: 40px;
+  margin: 4px;
+  font-style: italic;
+  border-radius: 2px;
+  border: 1px solid #fff;
+}
+
+@-webkit-keyframes gameblink {
+  from {
+    opacity: .01;
+  }
+  to {
+    opacity: .1;
+  }
+}
+
+@keyframes gameblink {
+  from {
+    opacity: .01;
+  }
+  to {
+    opacity: .1;
+  }
+}
+/*# sourceMappingURL=sitestyle.css.map */

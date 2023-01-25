@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+code .
+python3 -m http.server
